@@ -1,0 +1,237 @@
+/* =========================
+   RESET (if not already global)
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
+body {
+  background: #000000; /* almost pure black */
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+/* =========================
+   AI ASSISTANT PAGE
+========================= */
+
+/* Header */
+.assistant-header {
+  margin-bottom: 30px;
+}
+
+.assistant-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.assistant-header p {
+  color: #8b8b8b;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* Layout */
+.assistant-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+/* =========================
+   LEFT - CHAT SECTION
+========================= */
+
+.assistant-chat {
+  background: #121212; /* dark charcoal */
+  border-radius: 18px;
+  padding: 25px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #2a2a2a; /* subtle grey */
+  transition: 0.3s ease;
+}
+
+.assistant-chat:hover {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.08);
+}
+
+/* Chat Messages Container */
+.chat-box {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-right: 5px;
+}
+
+/* Individual Messages */
+.message {
+  padding: 12px 16px;
+  border-radius: 14px;
+  max-width: 75%;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: 0.3s ease;
+}
+
+/* User Message */
+.message.user {
+  background: #f59e0b;
+  color: #000000;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+/* AI Message */
+.message.ai {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #ffffff;
+}
+
+/* =========================
+   INPUT AREA
+========================= */
+
+.chat-input {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid #2a2a2a;
+  background: #111111;
+  color: #ffffff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.chat-input input:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+.chat-input button {
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #f59e0b;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000000;
+  transition: 0.3s ease;
+}
+
+.chat-input button:hover {
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RIGHT PANEL (Capabilities)
+========================= */
+
+.assistant-side {
+  background: #121212;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s ease;
+}
+
+.assistant-side:hover {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.08);
+}
+
+.assistant-side h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f59e0b;
+  margin-bottom: 20px;
+}
+
+.assistant-side ul {
+  list-style: none;
+}
+
+.assistant-side li {
+  margin-bottom: 12px;
+  color: #8b8b8b;
+  font-size: 14px;
+}
+
+.assistant-side li::before {
+  content: "✔";
+  color: #f59e0b;
+  margin-right: 10px;
+}
+
+/* =========================
+   SUGGESTED PROMPTS
+========================= */
+
+.suggested-prompts {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.prompt-card {
+  flex: 1 1 calc(33.33% - 15px);
+  padding: 15px;
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  color: #b5b5b5;
+}
+
+.prompt-card:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+.prompt-card span {
+  display: block;
+  font-size: 13px;
+  color: #8b8b8b;
+  margin-top: 6px;
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+@media (max-width: 1024px) {
+  .assistant-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .suggested-prompts {
+    flex-direction: column;
+  }
+
+  .prompt-card {
+    flex: 1 1 100%;
+  }
+}

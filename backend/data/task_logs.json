@@ -1,0 +1,132 @@
+[
+  {
+    "task": "  - Install Python on your computer (if you haven't already done so).",
+    "status": "completed",
+    "timestamp": "2026-01-22T23:37:31.696600"
+  },
+  {
+    "task": "  - Choose a code editor or IDE (Integrated Development Environment) such as PyCharm, Visual Studio Code, or Spyder.",
+    "status": "missed",
+    "timestamp": "2026-01-22T23:37:53.980527"
+  },
+  {
+    "task": "\u2022 **Task 2: Learn basic syntax and data types**",
+    "status": "completed",
+    "timestamp": "2026-01-22T23:38:50.448731"
+  },
+  {
+    "task": "  - Start by learning the basic syntax and data types in Python, such as numbers, strings, booleans, lists, and dictionaries.",
+    "status": "completed",
+    "timestamp": "2026-01-22T23:38:51.888751"
+  },
+  {
+    "task": "  - Practice writing and executing simple Python code using your chosen editor.",
+    "status": "completed",
+    "timestamp": "2026-01-22T23:38:53.884582"
+  },
+  {
+    "task": "  - Explore online resources such as official Python documentation and tutorials to deepen your understanding.",
+    "status": "missed",
+    "timestamp": "2026-01-22T23:39:09.179406"
+  },
+  {
+    "task": "\u2022 **Task 3: Understand control structures and functions**",
+    "status": "missed",
+    "timestamp": "2026-01-22T23:39:15.334134"
+  },
+  {
+    "task": "  - Experiment with writing your own functions and modules.",
+    "status": "missed",
+    "timestamp": "2026-01-22T23:39:23.275718"
+  },
+  {
+    "task": "Install Python",
+    "status": "done",
+    "timestamp": "2026-01-22T23:57:05.048154"
+  },
+  {
+    "task": "Practice loops",
+    "status": "done",
+    "timestamp": "2026-01-22T23:57:37.281001"
+  },
+  {
+    "task": "Practice loops",
+    "status": "done",
+    "timestamp": "2026-01-22T23:57:43.702771"
+  },
+  {
+    "task": "Read documentation",
+    "status": "missed",
+    "timestamp": "2026-01-22T23:58:53.236194"
+  },
+  {
+    "task": "Solve recursion problems",
+    "status": "missed",
+    "timestamp": "2026-01-22T23:59:07.565487"
+  },
+  {
+    "task": "* **Task 1: Set up a learning environment**",
+    "status": "completed",
+    "timestamp": "2026-01-23T13:11:01.593602"
+  },
+  {
+    "task": "  - Follow popular Python bloggers, podcasts, and YouTube channels to stay up-to-date",
+    "status": "completed",
+    "timestamp": "2026-01-23T13:11:24.298504"
+  },
+  {
+    "task": "\u2022 **Day 1 (Tonight): Review Past Notes and Past Papers**",
+    "status": "completed",
+    "timestamp": "2026-01-23T13:34:38.519608"
+  },
+  {
+    "task": "Review Notes and Textbook",
+    "status": "done",
+    "timestamp": "2026-01-23T13:37:39.888729"
+  },
+  {
+    "task": "\u2022 **Day 1 (Tonight): Review Past Notes and Past Papers**",
+    "status": "completed",
+    "timestamp": "2026-01-23T14:28:26.435454"
+  },
+  {
+    "task": "Review Notes and Textbook",
+    "status": "done",
+    "timestamp": "2026-01-23T14:31:00.757031"
+  },
+  {
+    "task": "Solve recursion problems",
+    "status": "misssed",
+    "timestamp": "2026-01-23T14:32:14.847969"
+  },
+  {
+    "task": "Solve recursion problems",
+    "status": "misssed",
+    "timestamp": "2026-01-23T14:37:34.074417"
+  },
+  {
+    "task": "Review Course Material",
+    "status": "completed",
+    "timestamp": "2026-02-16T11:33:20.012963"
+  },
+  {
+    "task": "\u2022 **Day 1: Review and Refresh (8 hours)**",
+    "status": "completed",
+    "timestamp": "2026-02-16T13:41:39.023257"
+  },
+  {
+    "task": "\u2022 **Day 2: Practice and Past Papers (8 hours)**",
+    "status": "completed",
+    "timestamp": "2026-02-16T13:43:16.156905"
+  },
+  {
+    "task": "  * Complete a few past-year question papers or sample papers to assess your level of preparation.",
+    "status": "missed",
+    "timestamp": "2026-02-16T13:43:41.440834"
+  },
+  {
+    "task": "  * Complete a few past-year question papers or sample papers to assess your level of preparation.",
+    "status": "missed",
+    "timestamp": "2026-02-16T13:43:43.056972"
+  }
+]

@@ -1,0 +1,82 @@
+.goal-detail-container {
+  padding: 20px;
+}
+
+.goal-header {
+  margin-bottom: 25px;
+  padding: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.goal-progress-section {
+  margin-top: 15px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f39c12, #f1c40f);
+  transition: width 0.4s ease;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.task-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.slot-badge {
+  background: rgba(243, 156, 18, 0.2);
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #f39c12;
+}
+
+.status-badge {
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.status-badge.completed {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.status-badge.pending {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+}
+
+.status-badge.missed {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}

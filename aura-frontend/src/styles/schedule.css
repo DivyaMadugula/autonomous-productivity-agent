@@ -1,0 +1,294 @@
+/* =========================
+   SCHEDULE PAGE STYLES
+========================= */
+
+/* =========================
+   CALENDAR BAR
+========================= */
+.date-selector {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.date-pill {
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.date-pill.active {
+  background: #f59e0b;
+  color: black;
+  font-weight: bold;
+}
+
+.schedule-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.slot-card {
+  padding: 20px;
+}
+
+.task-card {
+  background: #1a1a1a;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.task-card.completed {
+  opacity: 0.6;
+}
+
+.empty-slot {
+  opacity: 0.4;
+}
+.calendar-bar {
+  background: #121212; /* dark charcoal */
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid #2a2a2a; /* subtle grey */
+  margin-bottom: 35px;
+  transition: 0.3s ease;
+}
+
+.calendar-bar:hover {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.08);
+}
+
+.calendar-days {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.day {
+  padding: 12px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #8b8b8b;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.day:hover {
+  background: rgba(245, 158, 11, 0.08);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.day.active {
+  background: #f59e0b;
+  color: #000000;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+.calendar-btn {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #f59e0b;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calendar-btn:hover {
+  background: #ffb84d;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.schedule-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* =========================
+   LEFT SIDE - TASKS
+========================= */
+.schedule-left {
+  background: #121212;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s ease;
+}
+
+.schedule-left:hover {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.08);
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.schedule-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f59e0b;
+}
+
+.add-task-btn {
+  background: #f59e0b;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  transition: 0.3s ease;
+}
+
+.add-task-btn:hover {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TASK CARDS
+========================= */
+.task-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.task-card:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.12);
+  transform: translateY(-3px);
+}
+
+.task-card.focused {
+  border: 1px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.06);
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.15);
+}
+
+.task-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+.task-card p {
+  font-size: 14px;
+  color: #b5b5b5;
+}
+
+.task-card span {
+  font-size: 12px;
+  color: #8b8b8b;
+}
+
+/* =========================
+   RIGHT SIDE - TIME BLOCKS
+========================= */
+.schedule-right {
+  background: #121212;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s ease;
+}
+
+.schedule-right:hover {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.08);
+}
+
+.schedule-right h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f59e0b;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   TIME BLOCKS
+========================= */
+.time-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #1a1a1a;
+  border-radius: 14px;
+  border: 1px solid #2a2a2a;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+.time-block:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.1);
+}
+
+.time-block span {
+  font-size: 14px;
+  color: #b5b5b5;
+}
+
+/* Status Dot */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+@media (max-width: 1024px) {
+  .schedule-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-bar {
+    margin-bottom: 25px;
+  }
+
+  .schedule-left,
+  .schedule-right {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .add-task-btn {
+    width: 100%;
+  }
+
+  .schedule-layout {
+    grid-template-columns: 1fr;
+  }
+}

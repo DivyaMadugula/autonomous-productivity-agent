@@ -1,0 +1,218 @@
+[
+  {
+    "task": "Learn Python Basics",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:25:40.037386"
+  },
+  {
+    "task": "Build Python Project",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:26:17.644029"
+  },
+  {
+    "task": "Build Python Project",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:28:39.798117"
+  },
+  {
+    "task": "Practice Python Coding",
+    "status": "completed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:29:06.274753"
+  },
+  {
+    "task": "Practice Python Coding",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:29:18.589231"
+  },
+  {
+    "task": "Join Python Community",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:29:33.688645"
+  },
+  {
+    "task": "Join Python Community",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:29:41.508052"
+  },
+  {
+    "task": "Read Python Documentation",
+    "status": "missed",
+    "slot": "evening",
+    "timestamp": "2026-02-16T23:30:09.656557"
+  },
+  {
+    "task": "Read Python Documentation",
+    "status": "missed",
+    "slot": "evening",
+    "timestamp": "2026-02-16T23:30:11.948619"
+  },
+  {
+    "task": "Attend review sessions",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:33:30.730845"
+  },
+  {
+    "task": "Get enough sleep",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:34:02.699239"
+  },
+  {
+    "task": "Review notes",
+    "status": "completed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:34:41.565824"
+  },
+  {
+    "task": "Create a study schedule",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:35:08.820886"
+  },
+  {
+    "task": "Practice past exams",
+    "status": "completed",
+    "slot": "evening",
+    "timestamp": "2026-02-16T23:35:45.302226"
+  },
+  {
+    "task": "build python projects",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:41:36.449587"
+  },
+  {
+    "task": "join python community",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:42:43.439701"
+  },
+  {
+    "task": "Read Python Documentation",
+    "status": "missed",
+    "slot": "evening",
+    "timestamp": "2026-02-16T23:46:24.455609"
+  },
+  {
+    "task": "Learn Python Basics",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:47:50.802223"
+  },
+  {
+    "task": "Learn Python Basics",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:47:57.990341"
+  },
+  {
+    "task": "Read Python Documentation",
+    "status": "completed",
+    "slot": "evening",
+    "timestamp": "2026-02-16T23:50:27.166392"
+  },
+  {
+    "task": "Solve online problems",
+    "status": "completed",
+    "slot": "evening",
+    "timestamp": "2026-02-16T23:53:19.523861"
+  },
+  {
+    "task": "Check for any last-minute updates",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:53:51.843547"
+  },
+  {
+    "task": "Review notes",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:54:33.764453"
+  },
+  {
+    "task": "Review notes",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:54:52.166573"
+  },
+  {
+    "task": "Get enough sleep",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-16T23:55:46.735509"
+  },
+  {
+    "task": "Join Python Community",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:56:42.789986"
+  },
+  {
+    "task": "build python projects",
+    "status": "missed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-16T23:58:30.004602"
+  },
+  {
+    "task": "Take Python Certification",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-19T23:27:28.579788"
+  },
+  {
+    "task": "learn python",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-19T23:28:02.317423"
+  },
+  {
+    "task": "learn python basics",
+    "status": "morning",
+    "slot": "missed",
+    "timestamp": "2026-02-19T23:34:26.921178"
+  },
+  {
+    "task": "learn python basics",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-19T23:40:34.699365"
+  },
+  {
+    "task": "complete python project",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-20T13:17:43.509542"
+  },
+  {
+    "task": "learn python basics",
+    "status": "missed",
+    "slot": "morning",
+    "timestamp": "2026-02-20T15:02:28.483060"
+  },
+  {
+    "task": "learn python basics",
+    "status": "completed",
+    "slot": "morning",
+    "timestamp": "2026-02-22T19:41:19.435538"
+  },
+  {
+    "task": "Understand Python Syntax",
+    "status": "missed",
+    "slot": "evening",
+    "timestamp": "2026-02-22T19:53:49.315339"
+  },
+  {
+    "task": "Work on Python Projects",
+    "status": "completed",
+    "slot": "afternoon",
+    "timestamp": "2026-02-22T19:56:37.835110"
+  }
+]
