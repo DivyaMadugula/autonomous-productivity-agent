@@ -21,6 +21,15 @@ body {
 ========================= */
 
 /* Header */
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 10px;
+  padding-right: 5px;
+}
 .assistant-header {
   margin-bottom: 30px;
 }

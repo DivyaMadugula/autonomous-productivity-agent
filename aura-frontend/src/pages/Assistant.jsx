@@ -1,5 +1,8 @@
 import "../styles/assistant.css";
 import { useState } from "react";
+import API from "../api/api"
+import toast from "react-hot-toast";
+import { showNotification } from "../utils/notifications";
 
 const Assistant = () => {
   const [messages, setMessages] = useState([
@@ -8,16 +11,38 @@ const Assistant = () => {
       text: "How can I help you today?",
     },
   ]);
+const [input, setInput] = useState(""); 
+  const sendMessage = async (text) => {
+  if (!text) return;
 
-  const sendMessage = (text) => {
-    if (!text) return;
+  // Show user message immediately
+  setMessages((prev) => [
+    ...prev,
+    { role: "user", text },
+    { role: "ai", text: "Thinking..." },
+  ]);
 
-    setMessages([
-      ...messages,
-      { role: "user", text },
-      { role: "ai", text: "I'm analyzing your productivity patterns..." },
+  try {
+    const res = await API.post("/assistant", {
+      message: text,
+    });
+
+    // Replace "Thinking..." with real response
+    setMessages((prev) => [
+      ...prev.slice(0, -1),
+      { role: "ai", text: res.data.reply },
     ]);
-  };
+    toast.success("Aura replied 🤖");
+  } catch (err) {
+    console.error(err);
+
+    setMessages((prev) => [
+      ...prev.slice(0, -1),
+      { role: "ai", text: "Something went wrong 😅" },
+    ]);
+    toast.error("AI failed ❌");
+  }
+};
 
   return (
     <>
@@ -33,13 +58,19 @@ const Assistant = () => {
         <div className="assistant-chat card">
           {/* Suggested Prompts */}
           <div className="suggested-prompts">
-            <div className="prompt-card">
+            <div className="prompt-card"
+            onClick={() => sendMessage("Optimize my daily schedule")}
+            >
               Optimize your daily schedule
             </div>
-            <div className="prompt-card">
+            <div className="prompt-card"
+            onClick={() => sendMessage("Analyze my productivity patterns")}>
+
               Analyze productivity patterns
             </div>
-            <div className="prompt-card">
+            <div className="prompt-card"
+            onClick={() => sendMessage("Suggest improvements based on my habits")}
+            >
               Suggest improvements based on habits
             </div>
           </div>
@@ -55,22 +86,27 @@ const Assistant = () => {
 
           {/* Input */}
           <div className="chat-input">
-            <input
-              type="text"
-              placeholder="Ask Aura anything about your productivity..."
-              onKeyDown={(e) =>
-                e.key === "Enter" && sendMessage(e.target.value)
-              }
-            />
-            <button
-              onClick={() => {
-                const input = document.querySelector(".chat-input input");
-                sendMessage(input.value);
-                input.value = "";
-              }}
-            >
-              ➤
-            </button>
+           <input
+  type="text"
+  value={input}
+  placeholder="Ask Aura anything about your productivity..."
+  onChange={(e) => setInput(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === "Enter") {
+      sendMessage(input);
+      setInput("");
+    }
+  }}
+/>
+
+<button
+  onClick={() => {
+    sendMessage(input);
+    setInput("");
+  }}
+>
+  ➤
+</button>
           </div>
         </div>
 

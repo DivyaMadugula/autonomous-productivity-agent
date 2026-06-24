@@ -8,6 +8,26 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.task-item button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Complete button */
+.task-item button:first-child {
+  background: #22c55e;  /* green */
+  color: white;
+}
+
+/* Delete button */
+.task-item button:last-child {
+  background: #ef4444;  /* red */
+  color: white;
+}
+
 /* =========================
    DASHBOARD PAGE
 ========================= */

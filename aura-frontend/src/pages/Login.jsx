@@ -45,7 +45,7 @@ const Login = () => {
       <div className="auth-card card">
 
         <div className="login-header">
-          <img src={logo} alt="Aura Logo" className="logo-img" />
+          <h2 className="logo">▲ Aura</h2>
           <h2>Welcome Back</h2>
           <p className="login-subheading">
             Please enter your credentials

@@ -1,6 +1,8 @@
 import "../styles/schedule.css";
 import { useEffect, useState } from "react";
 import API from "../api/api";
+import { addEventToCalendar } from "../utils/googleCalendar";
+
 
 const Schedule = () => {
   const [schedule, setSchedule] = useState({});
@@ -23,52 +25,53 @@ const Schedule = () => {
     }
   };
 
-  const generateWeekDates = () => {
-    const dates = [];
-    const today = new Date();
+  // 🔥 Generate week dates
+  const generateMonthDates = () => {
+  const dates = [];
+  const today = new Date();
 
-    for (let i = -3; i <= 3; i++) {
-      const d = new Date();
-      d.setDate(today.getDate() + i);
-      dates.push(d);
-    }
+  for (let i = -15; i <= 15; i++) {
+    const d = new Date();
+    d.setDate(today.getDate() + i);
+    dates.push(d);
+  }
 
-    return dates;
-  };
-
-  const weekDates = generateWeekDates();
-  const addToCalendar = (task, slot) => {
-  const date = new Date(selectedDate);
-
-  let hour = 9; // default morning
-
-  if (slot === "afternoon") hour = 14;
-  if (slot === "evening") hour = 19;
-
-  const start = new Date(date.setHours(hour, 0, 0));
-  const end = new Date(start.getTime() + 60 * 60 * 1000); // 1 hour duration
-
-  const formatDate = (d) =>
-    d.toISOString().replace(/-|:|\.\d\d\d/g, "");
-
-  const url = `https://calendar.google.com/calendar/render?action=TEMPLATE
-    &text=${encodeURIComponent(task.title)}
-    &dates=${formatDate(start)}/${formatDate(end)}
-    &details=${encodeURIComponent("Scheduled via Aura AI")}
-    &sf=true
-    &output=xml`;
-
-  window.open(url, "_blank");
+  return dates;
 };
+  const weekDates = generateMonthDates();
+
+  // 🔥 Google Calendar Integration
+  const addToCalendar = (task, slot) => {
+    const date = new Date(selectedDate);
+
+    let hour = 9;
+    if (slot === "afternoon") hour = 14;
+    if (slot === "evening") hour = 19;
+
+    const start = new Date(date.setHours(hour, 0, 0));
+    const end = new Date(start.getTime() + 60 * 60 * 1000);
+
+    const formatDate = (d) =>
+      d.toISOString().replace(/-|:|\.\d\d\d/g, "");
+
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE
+      &text=${encodeURIComponent(task.title)}
+      &dates=${formatDate(start)}/${formatDate(end)}
+      &details=${encodeURIComponent("Scheduled via Aura AI")}
+      &sf=true
+      &output=xml`;
+
+    window.open(url, "_blank");
+  };
 
   return (
     <>
       <div className="schedule-header">
-        <h1>Autonomous Personal Productivity AI</h1>
+        <h1>Schedule</h1>
       </div>
 
-      {/* Date Selector */}
-      <div className="date-selector card">
+      {/* 🔥 HORIZONTAL DATE SCROLL */}
+      <div className="date-scroll card">
         {weekDates.map((date) => {
           const formatted = date.toISOString().split("T")[0];
           const isActive = formatted === selectedDate;
@@ -76,36 +79,46 @@ const Schedule = () => {
           return (
             <div
               key={formatted}
-              className={`date-pill ${isActive ? "active" : ""}`}
+              className={`date-card ${isActive ? "active" : ""}`}
               onClick={() => setSelectedDate(formatted)}
             >
-              <span>{date.toLocaleDateString("en-US", { weekday: "short" })}</span>
+              <span>
+                {date.toLocaleDateString("en-US", { weekday: "short" })}
+              </span>
               <strong>{date.getDate()}</strong>
             </div>
           );
         })}
       </div>
 
-      {/* Schedule Blocks */}
+      {/* 🔥 SCHEDULE */}
       <div className="schedule-main">
         {["morning", "afternoon", "evening"].map((slot) => (
           <div key={slot} className="slot-card card">
-            <h3>{slot.charAt(0).toUpperCase() + slot.slice(1)}</h3>
+            <h3>
+              {slot.charAt(0).toUpperCase() + slot.slice(1)}
+            </h3>
 
             {schedule[slot]?.length === 0 ? (
-              <p className="empty-slot">No tasks</p>
+              <div className="empty-state">
+                ✨ No tasks planned
+                <span>Take a break or add something!</span>
+              </div>
             ) : (
-              schedule[slot]?.map((task) => (
-                <div className={`task-card ${task.status}`}>
-  <span>{task.title}</span>
+              schedule[slot]?.map((task, i) => (
+                <div key={i} className="task-card">
+                  <div className="task-left">
+                    <h4>{task.title}</h4>
+                    <p>{slot}</p>
+                  </div>
 
-  <button
-    className="calendar-btn"
-    onClick={() => addToCalendar(task, slot)}
-  >
-    📅 Add to Calendar
-  </button>
-</div>
+                  <button
+                    className="calendar-btn"
+                    onClick={() => addToCalendar(task, slot)}
+                  >
+                    📅 Add
+                  </button>
+                </div>
               ))
             )}
           </div>

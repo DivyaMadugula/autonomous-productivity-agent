@@ -1,5 +1,9 @@
 # ===== GOOGLE OAUTH CONFIG =====
 import os
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
@@ -45,6 +49,9 @@ app.add_middleware(
 )
 
 # ---------------- DB Dependency ----------------
+from routes.assistant import router as assistant_router
+
+app.include_router(assistant_router)
 def get_db():
     db = SessionLocal()
     try:
@@ -668,6 +675,23 @@ def get_schedule(
             "priority": task.priority,
             "difficulty": task.difficulty
         })
+    missed_count = 0
+
+    for slot in ["morning", "afternoon", "evening"]:
+        for task in schedule.get(slot, []):
+            if task["status"] == "missed":
+                missed_count += 1
+
+
+    # 🔥 AUTO EMAIL TRIGGER
+    if missed_count >= 3:
+        print("sending to: ",current_user.email)
+        send_email(
+            current_user.email,  # replace with actual user email later
+            "⚠ Missed Tasks Alert",
+            f"You missed {missed_count} tasks today. Stay consistent 💪"
+        )
+    
 
     return schedule
 @app.post("/retry_task")
@@ -754,4 +778,19 @@ def accept_suggestion(task_id: str,
         "task_id": task.id,
         "new_slot": new_slot
     }
-    
+from utils.email import send_email
+
+@app.post("/send-missed-alert")
+def send_missed_alert(user_email: str, count: int):
+    subject = "⚠ Missed Tasks Alert"
+
+    message = f"""
+    You missed {count} tasks today.
+
+    Stay consistent 💪
+    - Aura AI
+    """
+
+    send_email(user_email, subject, message)
+
+    return {"message": "Email sent"}

@@ -10,7 +10,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Goal from "./pages/Goal";
 import GoalDetail from "./pages/GoalDetail";
+import { Toaster } from "react-hot-toast";
+import Landing from "./pages/Landing";
 // PrivateRoute component
+
 const PrivateRoute = ({ children }) => {
   const isAuth = localStorage.getItem("auth");
   return isAuth ? children : <Navigate to="/login" />;
@@ -18,13 +21,29 @@ const PrivateRoute = ({ children }) => {
 const isAuthenticated = () => {
   return localStorage.getItem("token") !== null;
 };
+export const showNotification = (title, body) => {
+  if (Notification.permission === "granted") {
+    new Notification(title, { body });
+  } else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        new Notification(title, { body });
+      }
+    });
+  }
+};
 function App() {
   return (
+    <>
+    <Toaster position="top-right" />
+    
+     
     <BrowserRouter>
       <Routes>
 
         {/* Default → Redirect */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/" element={<Landing />} />
+        {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
 
         {/* Public */}
         <Route path="/login" element={<Login />} />
@@ -113,6 +132,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 

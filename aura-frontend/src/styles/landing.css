@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #050505;
+  color: white;
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+}
+
+.logo {
+  color: #ff9900;
+}
+
+.nav-links span {
+  margin: 0 15px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.nav-btns .login {
+  background: transparent;
+  border: none;
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.nav-btns .start {
+  background: #ff9900;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.badge {
+  display: inline-block;
+  background: #111;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.hero span {
+  color: #ff9900;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.primary {
+  background: #ff9900;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  margin-right: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #333;
+  padding: 14px 28px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 60px;
+}
+
+.stats h2 {
+  color: #ff9900;
+}
+
+/* FEATURES */
+.features {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+}
+
+.features span {
+  color: #ff9900;
+}
+
+.subtitle {
+  color: #aaa;
+  margin: 10px 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: left;
+  border: 1px solid #1a1a1a;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border: 1px solid #ff9900;
+  transform: translateY(-5px);
+}
+
+/* CTA */
+.cta {
+  margin: 120px auto;
+  width: 700px;
+  text-align: center;
+  background: #111;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.cta p {
+  color: #aaa;
+}
+
+.big {
+  margin-top: 20px;
+}
+.hero-image {
+  margin: 100px 0 60px;  /* spacing like design */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 900px;
+  border-radius: 20px;
+  transform: rotate(-8deg);
+  box-shadow: 0 0 120px rgba(255, 153, 0, 0.35);
+}
+
+/* ðŸ”¥ HOW SECTION BIGGER */
+.how {
+  margin-top: 160px;
+  text-align: center;
+}
+
+.how h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.how span {
+  color: #ff9900;
+}
+
+/* STEPS CONTAINER */
+.steps {
+  margin-top: 60px;
+  width: 900px; /* increased */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* EACH STEP */
+.step {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+/* NUMBER BOX */
+.num {
+  width: 60px;
+  height: 60px;
+  background: #111;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff9900;
+  font-weight: bold;
+  font-size: 18px;
+
+  border: 1px solid #1f1f1f;
+}
+
+/* TEXT */
+.step h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.step p {
+  color: #aaa;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.num {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  color: #ff9900;
+  font-weight: bold;
+}
+/* ðŸ”¥ ICON BOX EXACT STYLE LIKE SCREENSHOT */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background: #1a1a1a;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff9900; /* orange */
+  font-size: 20px;
+
+  border: 1px solid #2a2a2a;
+  margin-bottom: 15px;
+}
+
+/* ICON STROKE STYLE */
+.icon-box svg {
+  stroke-width: 2.2;
+}
+/* ðŸ”¥ CTA FINAL FIXED (SOFT GLOW â€” NOT OVERPOWERING) */
+.cta {
+  margin: 140px auto;
+  width: 900px;
+  text-align: center;
+
+  background: linear-gradient(145deg, #0d0d0d, #141414);
+  padding: 80px 60px;
+  border-radius: 25px;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: inset 0 0 0.5px rgba(255,255,255,0.08),
+              0 0 40px rgba(255, 153, 0, 0.05);
+}
+
+/* ðŸ”¥ CONTROLLED LEFT GLOW (LESS INTENSE) */
+.cta::before {
+  content: "";
+  position: absolute;
+
+  width: 250px;   /* reduced */
+  height: 250px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,153,0,0.12),  /* reduced opacity */
+    transparent 70%
+  );
+
+  top: -60px;   /* adjusted */
+  left: -60px;  /* adjusted */
+
+  filter: blur(40px); /* smooth soft glow */
+}
+
+/* TEXT */
+.cta h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #aaa;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.cta-btn {
+  margin-top: 30px;
+
+  background: #ff9900;
+  padding: 16px 38px;
+  border-radius: 14px;
+  border: none;
+
+  font-weight: 600;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 18px rgba(255, 153, 0, 0.35); /* reduced */
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(255, 153, 0, 0.5);
+}

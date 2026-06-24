@@ -2,8 +2,18 @@ import "../styles/dashboard.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/api";
+import toast from "react-hot-toast";
+
+import { showNotification } from "../utils/notifications";
 
 const Dashboard = () => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      showNotification("Reminder", "Check your pending tasks!");
+    }, 60000); // every 1 minute
+
+    return () => clearInterval(interval);
+  }, []);
   const navigate = useNavigate();
   const [data, setData] = useState(null);
 
@@ -35,10 +45,15 @@ const Dashboard = () => {
   const bestSlot = data?.best_slot || "N/A";
 
   const handleComplete = async (taskId) => {
+    try{
     await API.post("/update_task", null, {
       params: { task_id: taskId, status: "completed" },
     });
     fetchDashboard();
+    toast.success("Task completed ✅");
+  }catch{
+    toast.error("Failed to update task ❌");
+  }
   };
 
   const handleMissed = async (taskId) => {

@@ -29,6 +29,7 @@ const Register = () => {
   return (
     <div className="auth-container">
       <div className="auth-card card">
+        <h2 className="logo">▲ Aura</h2>
         <h2>Register</h2>
 
         <input
