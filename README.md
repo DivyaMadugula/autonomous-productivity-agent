@@ -28,8 +28,6 @@
 
 ---
 
-# Aura AI — Autonomous Personal Productivity AI Agent
-
 ## 📌 Overview
 
 Aura AI is an intelligent productivity management system that uses **Agentic Artificial Intelligence** to automate personal task planning, scheduling, and productivity optimization.
@@ -39,6 +37,11 @@ Unlike traditional productivity applications that rely on manual task creation a
 The system uses AI reasoning and planning agents to improve productivity, consistency, and task completion rates.
 
 ---
+<p>
+  <a href="https://drive.google.com/file/d/1yp1O9ausTYvrZq7MzORCpAmrD237YLbd/view?usp=sharing">
+    <img src="https://img.shields.io/badge/🎥%20VIDEO%20DEMO-Watch%20Demo-orange?style=for-the-badge">
+  </a>
+</p>
 
 #  Problem Statement
 
@@ -353,15 +356,11 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
----
-
-# 📸 Application Screenshots
-
-(Add screenshots here)
+--
 
 ---
 
-# 📈 Results
+#  Results
 
 Aura AI successfully provides:
 
@@ -370,34 +369,6 @@ Aura AI successfully provides:
 ✔ Intelligent scheduling  
 ✔ Productivity tracking  
 ✔ Adaptive planning based on behavior  
-
----
-
-# 🔮 Future Scope
-
-Future improvements include:
-
-- 📱 Mobile and wearable application support
-- 🗣️ Conversational AI interface
-- 🧠 Context-aware scheduling
-- 📈 ML-based predictive scheduling
-- More advanced personalization
-
----
-
-# 👩‍💻 Authors
-
-**G. Pujitha Reddy**  
-**Divya Madugula**  
-**Teja Sree Patil**
-
----
-
-# ⭐ Contribution
-
-Contributions, suggestions, and improvements are welcome.
-
-Feel free to fork this repository and submit pull requests.
 
 ---
 
