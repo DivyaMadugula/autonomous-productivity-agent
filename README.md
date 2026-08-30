@@ -212,23 +212,47 @@ Behavior Analysis Agent   Analytics Agent
 # 📂 Project Structure
 
 ```
-Aura-AI
+autonomous-productivity-agent/
 │
-├── aura-frontend
-│   ├── Components
-│   ├── Pages
-│   ├── Styles
-│   └── React Files
+├── aura-frontend/                 
+│   └── src/
+│       ├── components/           
+│       ├── pages/                
+│       ├── styles/               
+│       ├── assets/                
+│       └── App.jsx              
 │
-├── backend
-│   ├── API
-│   ├── AI Agents
-│   ├── Database Models
-│   └── Backend Services
+├── backend/                       
+│   ├── agents/                    
+│   │   ├── goal_agent/           
+│   │   ├── planning_agent/       
+│   │   ├── scheduling_agent/     
+│   │   ├── behavior_agent/        
+│   │   └── analytics_agent/       
+│   │
+│   ├── routes/                  
+│   │   ├── auth.py              
+│   │   ├── goal_routes.py         
+│   │   └── task_routes.py      
+│   │
+│   ├── models.py                  
+│   ├── database.py               
+│   ├── config.py                  
+│   ├── main.py                    
+│   ├── storage/                  
+│   └── utils/                    
 │
-├── requirements.txt
-├── README.md
-└── Database Files
+├── requirements.txt              
+│
+├── productivity_ai.db           
+│
+├── architecture-diagram.svg       
+│
+├── app.bd                      
+│
+├── README.md                     
+│
+└── .gitignore                    
 ```
 
 ---
@@ -302,7 +326,7 @@ Generates:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/aura-ai.git
+git clone https://github.com/DivyaMadugula/autonomous-productivity-agent.git
 ```
 
 ---
