@@ -6,7 +6,9 @@
 
 ---
 
-![Aura AI Architecture](add-your-architecture-image-link-here)
+<p align="center">
+  <img src="a.png" width="900">
+</p>
 
 ---
 
