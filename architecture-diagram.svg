@@ -1,0 +1,87 @@
+<svg viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, 'Courier New', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12141c"/>
+      <stop offset="100%" stop-color="#0b0d13"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background card -->
+  <rect x="0" y="0" width="1000" height="420" rx="18" fill="url(#bg)" stroke="#23262f" stroke-width="1.5"/>
+
+  <!-- title -->
+  <text x="500" y="42" text-anchor="middle" fill="#7ee0a5" font-size="15" letter-spacing="3" font-weight="bold">
+    REACT · FASTAPI · POSTGRESQL · AI AGENT
+  </text>
+
+  <!-- FRONTEND -->
+  <rect x="40" y="150" width="150" height="90" rx="14" fill="none" stroke="#8b7bff" stroke-width="2"/>
+  <circle cx="178" cy="162" r="4" fill="#8b7bff" filter="url(#glow)"/>
+  <text x="115" y="192" text-anchor="middle" fill="#c9c6ff" font-size="12" font-weight="bold">REACT</text>
+  <text x="115" y="208" text-anchor="middle" fill="#c9c6ff" font-size="12" font-weight="bold">FRONTEND</text>
+  <text x="115" y="225" text-anchor="middle" fill="#7a76a8" font-size="10">:5173</text>
+
+  <!-- ARROW 1 -->
+  <line x1="190" y1="195" x2="250" y2="195" stroke="#8b7bff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="250,191 258,195 250,199" fill="#8b7bff"/>
+
+  <!-- API GATEWAY / BACKEND -->
+  <rect x="260" y="150" width="150" height="90" rx="14" fill="none" stroke="#5fd0e0" stroke-width="2"/>
+  <circle cx="398" cy="162" r="4" fill="#5fd0e0" filter="url(#glow)"/>
+  <text x="335" y="192" text-anchor="middle" fill="#bdeff5" font-size="12" font-weight="bold">FASTAPI</text>
+  <text x="335" y="208" text-anchor="middle" fill="#bdeff5" font-size="12" font-weight="bold">BACKEND</text>
+  <text x="335" y="225" text-anchor="middle" fill="#5a8a90" font-size="10">:8000</text>
+
+  <!-- ARROW to top service -->
+  <line x1="410" y1="175" x2="470" y2="115" stroke="#ff8a5c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="465,113 474,113 470,121" fill="#ff8a5c"/>
+
+  <!-- ARROW to bottom service -->
+  <line x1="410" y1="215" x2="470" y2="275" stroke="#5c9bff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="465,277 474,277 470,269" fill="#5c9bff"/>
+
+  <!-- TASK PLANNING AGENT (top) -->
+  <rect x="480" y="65" width="180" height="90" rx="14" fill="none" stroke="#ff7a45" stroke-width="2"/>
+  <circle cx="638" cy="77" r="4" fill="#ff5c33" filter="url(#glow)"/>
+  <text x="570" y="97" text-anchor="middle" fill="#ffb99a" font-size="12" font-weight="bold">TASK PLANNING</text>
+  <text x="570" y="113" text-anchor="middle" fill="#ffb99a" font-size="12" font-weight="bold">AGENT</text>
+  <text x="570" y="130" text-anchor="middle" fill="#a3653f" font-size="10">llm-core</text>
+
+  <!-- twin connector -->
+  <line x1="570" y1="155" x2="570" y2="235" stroke="#8b8b8b" stroke-width="1.5"/>
+  <text x="585" y="198" fill="#8b8b8b" font-size="10">syncs</text>
+
+  <!-- DYNAMIC SCHEDULING AGENT (bottom) -->
+  <rect x="480" y="235" width="180" height="90" rx="14" fill="none" stroke="#4d9bff" stroke-width="2"/>
+  <circle cx="638" cy="247" r="4" fill="#4d9bff" filter="url(#glow)"/>
+  <text x="570" y="267" text-anchor="middle" fill="#a9cfff" font-size="12" font-weight="bold">SCHEDULING</text>
+  <text x="570" y="283" text-anchor="middle" fill="#a9cfff" font-size="12" font-weight="bold">AGENT</text>
+  <text x="570" y="300" text-anchor="middle" fill="#4d6f9c" font-size="10">:8100</text>
+
+  <!-- ARROWS to DB -->
+  <line x1="660" y1="110" x2="770" y2="175" stroke="#999999" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="765,172 774,177 767,182" fill="#999999"/>
+
+  <line x1="660" y1="280" x2="770" y2="215" stroke="#999999" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="765,218 774,213 767,208" fill="#999999"/>
+
+  <!-- POSTGRESQL DATABASE -->
+  <rect x="780" y="150" width="170" height="90" rx="14" fill="none" stroke="#8f8f8f" stroke-width="2"/>
+  <circle cx="936" cy="162" r="4" fill="#cfcfcf" filter="url(#glow)"/>
+  <text x="865" y="192" text-anchor="middle" fill="#d8d8d8" font-size="12" font-weight="bold">POSTGRESQL</text>
+  <text x="865" y="208" text-anchor="middle" fill="#d8d8d8" font-size="12" font-weight="bold">DATABASE</text>
+  <text x="865" y="225" text-anchor="middle" fill="#8f8f8f" font-size="10">:5432</text>
+
+  <!-- GOOGLE CALENDAR API (external, bottom) -->
+  <rect x="480" y="345" width="180" height="55" rx="12" fill="none" stroke="#f2c14e" stroke-width="1.8" stroke-dasharray="3,3"/>
+  <text x="570" y="368" text-anchor="middle" fill="#f2d98a" font-size="11" font-weight="bold">GOOGLE CALENDAR API</text>
+  <text x="570" y="384" text-anchor="middle" fill="#a68e46" font-size="9">external sync</text>
+  <line x1="570" y1="325" x2="570" y2="345" stroke="#f2c14e" stroke-width="1.5" stroke-dasharray="3,3"/>
+</svg>
