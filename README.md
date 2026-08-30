@@ -1,4 +1,4 @@
-# 🧠 Autonomous Personal Productivity AI Agent
+#  Autonomous Personal Productivity AI Agent
 
 <p align="center">
   <b>AI-powered productivity assistant that autonomously plans, schedules, tracks, and optimizes user tasks.</b>
@@ -7,7 +7,7 @@
 ---
 
 <p align="center">
-  <img src="architecture-diagram.png" width="900">
+  <img src="architecture-diagram.svg" width="700">
 </p>
 
 ---
@@ -28,7 +28,7 @@
 
 ---
 
-# 🌟 Aura AI — Autonomous Personal Productivity AI Agent
+# Aura AI — Autonomous Personal Productivity AI Agent
 
 ## 📌 Overview
 
@@ -40,7 +40,7 @@ The system uses AI reasoning and planning agents to improve productivity, consis
 
 ---
 
-# 🎯 Problem Statement
+#  Problem Statement
 
 Traditional productivity tools require users to manually:
 
@@ -63,7 +63,7 @@ Aura AI solves this problem by providing an autonomous AI agent that:
 
 # ✨ Features
 
-## 🤖 AI Goal Understanding
+##  AI Goal Understanding
 
 - Accepts goals in natural language
 - Converts high-level goals into smaller actionable tasks
@@ -85,7 +85,7 @@ Tasks:
 
 ---
 
-## 📋 Intelligent Task Planning
+##  Intelligent Task Planning
 
 - Organizes generated tasks into workflows
 - Maintains task dependencies
@@ -93,7 +93,7 @@ Tasks:
 
 ---
 
-## ⏰ Dynamic AI Scheduling
+##  Dynamic AI Scheduling
 
 - Assigns tasks to optimal time slots:
 
@@ -110,7 +110,7 @@ Considers:
 
 ---
 
-## 📊 Productivity Analytics
+##  Productivity Analytics
 
 Provides insights such as:
 
@@ -122,7 +122,7 @@ Provides insights such as:
 
 ---
 
-## 🔄 Adaptive Planning
+##  Adaptive Planning
 
 The system continuously learns from:
 
@@ -134,7 +134,7 @@ and improves future scheduling decisions.
 
 ---
 
-## 📅 Google Calendar Integration
+##  Google Calendar Integration
 
 - Automatically synchronizes tasks
 - Provides real-time calendar scheduling
@@ -142,7 +142,7 @@ and improves future scheduling decisions.
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```
                 User Goals
@@ -196,7 +196,6 @@ Behavior Analysis Agent   Analytics Agent
 ## Database
 
 - PostgreSQL
-- SQLAlchemy ORM
 
 ## External Services
 
