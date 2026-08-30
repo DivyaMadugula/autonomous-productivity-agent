@@ -333,30 +333,69 @@ git clone https://github.com/DivyaMadugula/autonomous-productivity-agent.git
 ```
 
 ---
+# ⚙️ Backend Setup
 
-## Frontend Setup
+### Create and activate virtual environment
 
 ```bash
-cd aura-frontend
+# Create virtual environment
 
-npm install
+python -m venv venv
+```
 
-npm start
+### Activate on Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Activate on macOS/Linux
+
+```bash
+source venv/bin/activate
 ```
 
 ---
 
-## Backend Setup
+### Install Backend Dependencies
 
 ```bash
 cd backend
 
 pip install -r requirements.txt
+```
 
+---
+
+### Start Backend Server
+
+```bash
 uvicorn main:app --reload
 ```
 
---
+The backend server will start successfully.
+
+---
+
+# 🌐 Frontend Setup
+
+Navigate to the frontend directory:
+
+```bash
+cd aura-frontend
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+Start the frontend application:
+
+```bash
+npm start
+```
 
 ---
 
